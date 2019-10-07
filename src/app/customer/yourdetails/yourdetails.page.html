@@ -1,0 +1,88 @@
+
+<form (ngSubmit)="onDetails(form)" #form="ngForm">
+        
+         <p text-center><b>Please enter these details</b></p>
+         <ion-card padding="20" offset="2">      
+  <br />
+ 
+         <ion-grid>
+           <ion-row>
+             <ion-col>
+               <ion-item>
+                 <div></div>
+                 <ion-thumbnail slot="start">
+                   <ion-icon name="contact"></ion-icon>
+                 </ion-thumbnail>
+                 <ion-label position="floating">Name</ion-label>
+                 <ion-input type="text" [(ngModel)]="details.name"  #username="ngModel" name="name" required minlength="6"></ion-input>
+                 <div *ngIf="username.invalid && (username.dirty || username.untouched)">
+                   <p *ngIf="username.hasError('required')">
+                     *UserName Is Required!!
+                   </p>
+                   <p *ngIf="username.hasError('minlength')">
+                     Minimum 6 Charecters are Required
+                   </p>
+                 </div>
+              
+                </ion-item>
+               <ion-item>
+                 <ion-thumbnail slot="start">
+                   <ion-icon name="call"></ion-icon>
+                 </ion-thumbnail>
+                 <ion-label position="floating">Contact No</ion-label>
+                 <ion-input type="number" [(ngModel)]="details.phoneNo" #contactno="ngModel" name="phoneNo" required ></ion-input>
+                 <div *ngIf="contactno.invalid && (contactno.dirty || contactno.untouched)">
+                   <p *ngIf="contactno.hasError('required')">
+                     *Contact No Is required!!
+                   </p>
+                   <p *ngIf="contactno.hasError(min)">
+                      *Enter A valid contact no !!
+                    </p>
+                 </div>
+               </ion-item>
+               <ion-item>
+                 <ion-thumbnail slot="start">
+                   <ion-icon name="mail"></ion-icon>
+                 </ion-thumbnail>
+                 <ion-label position="floating" required>EmailID</ion-label>
+                 <ion-input type="text" [(ngModel)]="details.email" #emailid="ngModel" name="email" required email></ion-input>
+                 <div *ngIf="emailid.invalid && (emailid.dirty || emailid.untouched)">
+                   <p *ngIf="emailid.hasError('required')">
+                     *EmailId Is required!!
+                   </p>
+                 </div>
+               </ion-item>
+             </ion-col>
+           </ion-row>
+         </ion-grid>
+         <br />
+         <br />
+         <ion-grid>
+           <ion-row>
+             <ion-col offset="5">
+               <div style="display: inline;">
+                 <ion-button type="submit" color="primary" fill="solid" slot="end" routerLink="/customer/tabs/rating" [disabled]="form.invalid">
+                   Next
+                 </ion-button>
+               </div>
+             </ion-col>
+           </ion-row>
+         </ion-grid>
+        </ion-card>
+
+
+       <br />
+       <p></p>
+       <br />
+       <br />
+       <!-- <ion-item>
+         <ion-label>Subscribe For News</ion-label>
+         <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+       </ion-item> -->
+     </form>
+ 
+    <div class="footer">
+	        <div class="container text-center">
+	            <p position="te"> Made with ♥️ by <a href="#">Aditya Shashank</a>.
+	        </div>
+	    </div>
