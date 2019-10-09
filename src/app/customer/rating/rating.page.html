@@ -12,15 +12,18 @@
         <form (ngSubmit)="onRating(form)" #form="ngForm">
           <ion-grid>
             <ion-row>
-              <ion-col>
+              <ion-col   offset-sm="20" text-center>
                 <ion-radio-group>
-                  <ion-list>
-                    <ion-item *ngFor="let item of ratings" (ionSelect)="radioSelect($event)">
-                      <ion-label>{{item.text}}</ion-label>
-                      <ion-radio slot="end" [value]="item.value" [name]="item.name" 
-                        [checked]="item.checked"> </ion-radio>
+                  
+                      <ion-label position ="center">
+                    <ion-item *ngFor="let item of ratings" >
+                       
+                            <ion-radio slot="end" [value]="item.value" [name]="item.name" 
+                            [checked]="item.checked" (ionSelect)="radioSelect($event)"></ion-radio>
+                            <ion-img [src] = "item.imageUrl" text-align="center"></ion-img>
                     </ion-item>
-                  </ion-list>
+                          
+                  </ion-label>
                 </ion-radio-group>
               </ion-col>
             </ion-row>
