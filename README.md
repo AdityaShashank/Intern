@@ -1,7 +1,7 @@
 # Intern
 #Sample app  
 This is sample app built on Angular and Nodejs and Mongo 
-![alt text]Screenshot (110).png)
+![alt text]http://github.com/AdityaShashank/customer-review/Screenshot(110).png)
 
 
 *This is meant to be an example project.
