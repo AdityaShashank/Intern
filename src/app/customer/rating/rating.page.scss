@@ -17,21 +17,16 @@ i.fas,
   .fa-facebook {
     color: rgb(59, 91, 152);
   }
-  ion-content{
-    background: red;
-    }
-  ion-card{
-    background: white;
-  }
 
 ion-radio{
   opacity:0;
 }
+
 ion-img{
-  width: 70px;
+  width: 85px;
   height: 70px;
   display: block;
-  margin-left: auto;
+  margin-left: 50px;
   margin-right: auto;
   
 }
@@ -77,10 +72,11 @@ div.gallery img {
   width: 100%;
   height: auto;
 }
-
-div.desc {
-  padding: 15px;
-  text-align: center;
+ion-item {
+  background-color: none;
+}
+ion-item:hover{
+ background-color: black;
 }
 
 * {
@@ -111,5 +107,33 @@ div.desc {
 }
 
 .tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+ion-img {
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+ion-img:hover {
+  box-shadow: black;
+}
+.text{
+  visibility: hidden;
+}
+.text:hover{
+  visibility: visible;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+#desc {
+  visibility: hidden;
+}
+#desc:hover{
   visibility: visible;
 }
